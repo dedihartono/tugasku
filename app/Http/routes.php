@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dedi', function () {
+    return view('public/home');
+});
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/home/{id}', 'HomeController@show');
